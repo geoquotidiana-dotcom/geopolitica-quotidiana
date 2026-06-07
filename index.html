@@ -167,19 +167,7 @@
     .footer-chips{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
     .footer-chip{padding:4px 11px;border:1px solid rgba(255,255,255,.1);border-radius:3px;font-family:var(--mono);font-size:9px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.25)}
 
-    /* MZ CREATOR */
-    .mz-creator{position:fixed;z-index:9999;background:rgba(20,20,20,.95);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.12);color:#fff;font-family:'Work Sans',-apple-system,sans-serif;border-radius:18px;box-shadow:0 12px 40px rgba(0,0,0,.45);transition:transform 180ms,box-shadow 180ms}
-    .mz-creator:hover{transform:translateY(-2px);box-shadow:0 18px 50px rgba(0,0,0,.55)}
-    .mz-creator-link{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;padding:inherit;border-radius:inherit}
-    .mz-creator-avatar{width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0;border:1.5px solid rgba(255,255,255,.15)}
-    .mz-creator-text{display:flex;flex-direction:column;line-height:1.3;min-width:0}
-    .mz-creator-text strong{font-size:13px;font-weight:800;letter-spacing:-.01em}
-    .mz-creator-text span{font-size:11.5px;color:rgba(255,255,255,.65);font-weight:500;margin-top:2px}
-    .mz-creator-btn{flex-shrink:0;background:#ff6463;color:#fff;font-size:11px;font-weight:800;padding:8px 12px;border-radius:100px;letter-spacing:-.01em;white-space:nowrap}
-    .mz-creator-close{position:absolute;top:-8px;right:-8px;width:24px;height:24px;border-radius:50%;background:rgba(20,20,20,.98);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.9);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;z-index:10000;transition:background 180ms,transform 120ms}
-    .mz-creator-close:hover{background:#1d1d1d;transform:scale(1.08);color:#fff}
-    @media(min-width:768px){.mz-creator{right:24px;top:50%;transform:translateY(-50%);width:240px}.mz-creator:hover{transform:translateY(calc(-50% - 2px))}.mz-creator-link{flex-direction:column;text-align:center;padding:18px 16px}.mz-creator-text{align-items:center}}
-    @media(max-width:767px){.mz-creator{left:12px;right:12px;bottom:12px}.mz-creator-link{padding:10px 12px}}
+    
 
     /* RESPONSIVE */
     @media(max-width:900px){
@@ -282,17 +270,6 @@
   </div>
 </footer>
 
-<!-- ATTRIBUTION -->
-<div class="mz-creator" id="mzCreator">
-  <button type="button" class="mz-creator-close" aria-label="Chiudi" onclick="document.getElementById('mzCreator').remove()">
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-  </button>
-  <a class="mz-creator-link" href="https://www.instagram.com/themattvision/" target="_blank" rel="noopener noreferrer">
-    <img class="mz-creator-avatar" src="https://link.wp.matteozampieri.com/social-share-image.webp" alt="Matteo Zampieri">
-    <div class="mz-creator-text">
-      <strong>Ti è stato utile?</strong>
-      <span>Seguimi per altre guide come questa.</span>
-    </div>
     <div class="mz-creator-btn">@themattvision →</div>
   </a>
 </div>
