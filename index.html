@@ -51,12 +51,12 @@
     .nav-pill:hover{color:rgba(255,255,255,.7)}
     .nav-pill.active{color:var(--white);border-bottom-color:var(--coral)}
     .nav-pill.active.cat-europa{border-bottom-color:var(--blue);color:#8888ff}
-    .nav-pill.active.cat-americhe{border-bottom-color:var(--coral);color:#ff9494}
+    .nav-pill.active.cat-americhe{border-bottom-color:var(--coral);color:#ff9494}.nav-pill.active.cat-sport{border-bottom-color:#00897b;color:#4db6ac}
 
     /* CAT TAGS */
     .cat-tag{display:inline-flex;align-items:center;padding:4px 10px;border-radius:3px;font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;width:fit-content}
     .cat-tag.europa{background:var(--blue);color:#fff}
-    .cat-tag.americhe{background:var(--coral);color:#fff}
+    .cat-tag.americhe{background:var(--coral);color:#fff}.cat-tag.sport{background:#00897b;color:#fff}
 
     /* HERO */
     .hero{position:relative;height:520px;overflow:hidden;background:var(--black);cursor:pointer}
@@ -90,7 +90,7 @@
     .sec-meta{font-family:var(--mono);font-size:9px;color:rgba(255,255,255,.4)}
     .sec-img-fallback{position:absolute;inset:0}
     .sec-img-fallback.europa{background:linear-gradient(145deg,#06051a,#1d00ff)}
-    .sec-img-fallback.americhe{background:linear-gradient(145deg,#1a0606,#ff6463)}
+    .sec-img-fallback.americhe{background:linear-gradient(145deg,#1a0606,#ff6463)}.sec-img-fallback.sport{background:linear-gradient(145deg,#001a18,#00897b)}
 
     /* SECTION DIVIDER */
     .section-divider{display:flex;align-items:center;gap:14px;padding:20px 32px 0}
@@ -137,7 +137,7 @@
     .art-meta-dot{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.15)}
     .art-bg-fallback{position:absolute;inset:0}
     .art-bg-fallback.europa{background:linear-gradient(145deg,#06051a,#1d00ff)}
-    .art-bg-fallback.americhe{background:linear-gradient(145deg,#1a0606,#ff6463)}
+    .art-bg-fallback.americhe{background:linear-gradient(145deg,#1a0606,#ff6463)}.art-bg-fallback.sport{background:linear-gradient(145deg,#001a18,#00897b)}
     .art-body-wrap{max-width:700px;margin:0 auto;padding:44px 28px 88px}
     .art-body{font-size:16.5px;line-height:1.78;color:#333}
     .art-body p{margin-bottom:22px}
@@ -208,6 +208,7 @@
     <button class="nav-pill active" id="btn-all" onclick="setCategory('all',this)">Tutto</button>
     <button class="nav-pill cat-europa" id="btn-europa" onclick="setCategory('europa',this)">Europa</button>
     <button class="nav-pill cat-americhe" id="btn-americhe" onclick="setCategory('americhe',this)">Americhe</button>
+    <button class="nav-pill cat-sport" id="btn-sport" onclick="setCategory('sport',this)">Cultura & Sport</button>
   </nav>
 </header>
 
@@ -396,7 +397,7 @@ let activeCategory = 'all';
 // ═══════════════════════════════════════
 //  HELPERS
 // ═══════════════════════════════════════
-function catLabel(cat){ return cat === 'europa' ? '🇪🇺 Europa' : '🌎 Americhe' }
+function catLabel(cat){ return cat==='europa'?'🇪🇺 Europa':cat==='sport'?'🏅 Sport':'🌎 Americhe' }
 function catTag(cat){ return `<div class="cat-tag ${cat}">${catLabel(cat)}</div>` }
 
 // ═══════════════════════════════════════
