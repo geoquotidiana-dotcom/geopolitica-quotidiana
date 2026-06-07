@@ -209,6 +209,7 @@
     <button class="nav-pill cat-europa" id="btn-europa" onclick="setCategory('europa',this)">Europa</button>
     <button class="nav-pill cat-americhe" id="btn-americhe" onclick="setCategory('americhe',this)">Americhe</button>
     <button class="nav-pill cat-sport" id="btn-sport" onclick="setCategory('sport',this)">Cultura & Sport</button>
+    <button class="nav-pill" id="btn-about" onclick="goToAbout()">Chi siamo</button>
   </nav>
 </header>
 
@@ -250,6 +251,75 @@
   <div class="art-related">
     <div class="art-related-label">Leggi Anche</div>
     <div class="art-related-grid" id="art-related"></div>
+  </div>
+</div>
+
+<!-- ABOUT VIEW -->
+<div id="about-view" style="display:none">
+  <div class="about-hero">
+    <div class="about-hero-inner">
+      <button class="back-btn" onclick="goHome()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Home
+      </button>
+      <div class="about-title">Chi Siamo</div>
+      <p class="about-tagline">Geopolitica, politica e attualità senza schierarsi. Né destra né sinistra. Solo fatti.</p>
+    </div>
+  </div>
+  <div class="about-body">
+
+    <div class="about-section">
+      <h2>La nostra missione</h2>
+      <p>Geopolitica Quotidiana nasce da un'idea semplice quanto difficile da realizzare: informare senza schierarsi.</p>
+      <p>In un panorama mediatico sempre più polarizzato, dove ogni notizia viene filtrata attraverso una lente ideologica — di destra o di sinistra, di questo governo o di quello, di questa narrativa o di quella contrapposta — abbiamo scelto di fare qualcosa di diverso. Raccontare i fatti. Solo i fatti.</p>
+      <p>Siamo convinti che le persone, quando vengono messe davanti a informazioni chiare e non manipolate, siano perfettamente capaci di farsi un'opinione propria. Non è nostro compito dirvi cosa pensare. È nostro compito darvi gli strumenti per farlo.</p>
+    </div>
+
+    <div class="about-section">
+      <h2>Chi siamo</h2>
+      <p>Siamo un piccolo team di persone appassionate di politica internazionale, geopolitica e attualità. Non siamo giornalisti professionisti nel senso tradizionale del termine, ma siamo lettori esigenti, osservatori attenti, persone che hanno smesso di aspettarsi dal mainstream quello che il mainstream non riesce più a dare: analisi chiara, linguaggio accessibile, assenza di agenda.</p>
+      <p>Veniamo da background diversi — chi ha studiato relazioni internazionali, chi economia, chi semplicemente ha trascorso anni a leggere, osservare e porsi domande sul perché le cose accadono nel modo in cui accadono. Quello che ci unisce è la stessa insofferenza verso la semplificazione e il tifo, e la stessa curiosità verso la complessità del mondo reale.</p>
+    </div>
+
+    <div class="about-section">
+      <h2>Il nostro metodo</h2>
+      <p>Ogni articolo che pubblichiamo parte da una domanda: cosa sta succedendo davvero? Non chi ha ragione o torto. Non quale partito ci guadagna. Non quale narrativa conferma le nostre aspettative. Solo: cosa sta succedendo, perché, e quali conseguenze può avere.</p>
+      <p>Usiamo fonti diverse, spesso contrastanti tra loro. Leggiamo i media di destra e quelli di sinistra, quelli occidentali e quelli del resto del mondo, quelli istituzionali e quelli indipendenti. Poi scriviamo quello che emerge quando si mettono insieme le diverse prospettive: un quadro più completo, più onesto, più utile.</p>
+      <p>Quando non sappiamo qualcosa, lo diciamo. Quando un'informazione è incerta, lo segnaliamo. Preferiamo ammettere la complessità piuttosto che fingere certezze che non abbiamo.</p>
+    </div>
+
+    <div class="about-section">
+      <h2>Cosa copriamo</h2>
+      <p>Il nostro focus principale è su <strong>Europa</strong> e <strong>Americhe</strong> — le due aree geopolitiche che influenzano più direttamente il mondo in cui viviamo. Ma non ci fermiamo alle grandi potenze: ci interessano i Balcani, l'America Latina, le elezioni nei paesi che sembrano lontani ma che non lo sono affatto.</p>
+      <p>Affianchiamo all'analisi geopolitica una sezione dedicata a <strong>Cultura e Sport</strong>, perché siamo convinti che anche lo sport rifletta equilibri di potere, che la cultura sia spesso il primo campo in cui si combattono le battaglie politiche, e che separare nettamente questi mondi significhi perdere una parte importante della storia.</p>
+      <p>Pubblichiamo ogni giorno. Nessun paywall, nessun abbonamento, nessuna pubblicità. Solo contenuti liberi per chiunque voglia capire meglio il mondo.</p>
+    </div>
+
+    <div class="about-section">
+      <h2>Contattaci</h2>
+      <p>Hai una segnalazione, una critica, un suggerimento o vuoi semplicemente dirci cosa ne pensi? Siamo qui.</p>
+      <div class="about-contacts">
+        <a class="contact-card" href="mailto:geoquotidiana@gmail.com">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff6463" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">geoquotidiana@gmail.com</div>
+          </div>
+        </a>
+        <a class="contact-card" href="https://instagram.com/geopolitica.quotidiana" target="_blank" rel="noopener noreferrer">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff6463" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Instagram</div>
+            <div class="contact-value">@geopolitica.quotidiana</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -412,9 +482,20 @@ function setCategory(cat, btn){
 
 function goHome(){
   document.getElementById('article-view').style.display = 'none';
+  document.getElementById('about-view').style.display = 'none';
   document.getElementById('home-view').style.display = 'block';
   window.scrollTo(0,0);
   window.onscroll = scrollHandler;
+}
+
+function goToAbout(){
+  document.getElementById('home-view').style.display='none';
+  document.getElementById('article-view').style.display='none';
+  document.getElementById('about-view').style.display='block';
+  document.querySelectorAll('.nav-pill').forEach(b=>b.classList.remove('active'));
+  document.getElementById('btn-about').classList.add('active');
+  window.scrollTo(0,0);
+  window.onscroll=scrollHandler;
 }
 
 function scrollHandler(){
