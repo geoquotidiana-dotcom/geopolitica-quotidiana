@@ -189,6 +189,34 @@
     @media(max-width:480px){
       .art-related-grid{grid-template-columns:1fr}
     }
+  
+    /* ── ABOUT PAGE ── */
+    #about-view{animation:fadeIn .3s ease}
+    .about-hero{background:var(--black);border-bottom:2.5px solid var(--coral);padding:56px 32px 52px}
+    .about-hero-inner{max-width:760px;margin:0 auto}
+    .about-pretitle{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--coral);margin-bottom:14px}
+    .about-title{font-family:var(--display);font-size:clamp(30px,4vw,52px);font-weight:700;color:var(--white);letter-spacing:-.8px;line-height:1.08;margin-bottom:18px}
+    .about-tagline{font-size:17px;color:rgba(255,255,255,.5);line-height:1.65;max-width:580px}
+    .about-wrap{max-width:760px;margin:0 auto;padding:56px 32px 88px}
+    .about-block{margin-bottom:52px;padding-bottom:52px;border-bottom:1px solid var(--gray-10)}
+    .about-block:last-of-type{border-bottom:none;margin-bottom:0;padding-bottom:0}
+    .about-block-label{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--coral);margin-bottom:12px}
+    .about-block h2{font-family:var(--display);font-size:28px;font-weight:700;color:var(--gray-90);letter-spacing:-.3px;line-height:1.15;margin-bottom:18px}
+    .about-block p{font-size:16px;line-height:1.82;color:#444;margin-bottom:16px}
+    .about-block p:last-child{margin-bottom:0}
+    .about-block p strong{color:var(--gray-90);font-weight:600}
+    .about-contacts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+    .contact-card{display:flex;align-items:center;gap:16px;padding:18px 20px;background:var(--off);border:1px solid var(--gray-10);border-radius:12px;text-decoration:none;transition:border-color .2s,transform .15s,background .15s}
+    .contact-card:hover{border-color:var(--coral);transform:translateY(-2px);background:#fff}
+    .contact-icon{width:42px;height:42px;border-radius:10px;background:var(--black);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .contact-info-label{font-family:var(--mono);font-size:9px;color:var(--gray-30);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+    .contact-info-value{font-size:14px;font-weight:600;color:var(--gray-90);line-height:1.2}
+    @media(max-width:600px){
+      .about-contacts{grid-template-columns:1fr}
+      .about-hero{padding:40px 24px 36px}
+      .about-wrap{padding:40px 24px 60px}
+    }
+
   </style>
 </head>
 <body>
@@ -256,65 +284,72 @@
 
 <!-- ABOUT VIEW -->
 <div id="about-view" style="display:none">
+
   <div class="about-hero">
     <div class="about-hero-inner">
       <button class="back-btn" onclick="goHome()">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
         Home
       </button>
-      <div class="about-title">Chi Siamo</div>
-      <p class="about-tagline">Geopolitica, politica e attualità senza schierarsi. Né destra né sinistra. Solo fatti.</p>
+      <div class="about-pretitle">Il progetto</div>
+      <div class="about-title">Chi siamo</div>
+      <p class="about-tagline">Geopolitica, politica e attualità senza schierarsi. Né destra né sinistra. Solo fatti, ogni giorno.</p>
     </div>
   </div>
-  <div class="about-body">
 
-    <div class="about-section">
-      <h2>La nostra missione</h2>
-      <p>Geopolitica Quotidiana nasce da un'idea semplice quanto difficile da realizzare: informare senza schierarsi.</p>
-      <p>In un panorama mediatico sempre più polarizzato, dove ogni notizia viene filtrata attraverso una lente ideologica — di destra o di sinistra, di questo governo o di quello, di questa narrativa o di quella contrapposta — abbiamo scelto di fare qualcosa di diverso. Raccontare i fatti. Solo i fatti.</p>
+  <div class="about-wrap">
+
+    <div class="about-block">
+      <div class="about-block-label">Missione</div>
+      <h2>Informare senza schierarsi</h2>
+      <p>Geopolitica Quotidiana nasce da un'idea semplice quanto difficile da realizzare: raccontare il mondo senza un'agenda. In un panorama mediatico sempre più polarizzato — dove ogni notizia viene filtrata attraverso una lente ideologica, di destra o di sinistra, di questo governo o di quello — abbiamo scelto di fare qualcosa di diverso.</p>
       <p>Siamo convinti che le persone, quando vengono messe davanti a informazioni chiare e non manipolate, siano perfettamente capaci di farsi un'opinione propria. Non è nostro compito dirvi cosa pensare. È nostro compito darvi gli strumenti per farlo.</p>
     </div>
 
-    <div class="about-section">
-      <h2>Chi siamo</h2>
+    <div class="about-block">
+      <div class="about-block-label">Il team</div>
+      <h2>Un piccolo gruppo con una grande curiosità</h2>
       <p>Siamo un piccolo team di persone appassionate di politica internazionale, geopolitica e attualità. Non siamo giornalisti professionisti nel senso tradizionale del termine, ma siamo lettori esigenti, osservatori attenti, persone che hanno smesso di aspettarsi dal mainstream quello che il mainstream non riesce più a dare: analisi chiara, linguaggio accessibile, assenza di agenda.</p>
-      <p>Veniamo da background diversi — chi ha studiato relazioni internazionali, chi economia, chi semplicemente ha trascorso anni a leggere, osservare e porsi domande sul perché le cose accadono nel modo in cui accadono. Quello che ci unisce è la stessa insofferenza verso la semplificazione e il tifo, e la stessa curiosità verso la complessità del mondo reale.</p>
+      <p>Veniamo da background diversi — chi ha studiato relazioni internazionali, chi economia, chi semplicemente ha trascorso anni a leggere, osservare e porsi domande su come funziona il mondo. Quello che ci unisce è la stessa insofferenza verso la semplificazione e il tifo, e la stessa curiosità verso la complessità del mondo reale.</p>
     </div>
 
-    <div class="about-section">
-      <h2>Il nostro metodo</h2>
-      <p>Ogni articolo che pubblichiamo parte da una domanda: cosa sta succedendo davvero? Non chi ha ragione o torto. Non quale partito ci guadagna. Non quale narrativa conferma le nostre aspettative. Solo: cosa sta succedendo, perché, e quali conseguenze può avere.</p>
+    <div class="about-block">
+      <div class="about-block-label">Metodo</div>
+      <h2>Come lavoriamo</h2>
+      <p>Ogni articolo parte da una domanda: cosa sta succedendo davvero? Non chi ha ragione o torto. Non quale partito ci guadagna. Non quale narrativa conferma le nostre aspettative. Solo: cosa sta succedendo, perché, e quali conseguenze può avere.</p>
       <p>Usiamo fonti diverse, spesso contrastanti tra loro. Leggiamo i media di destra e quelli di sinistra, quelli occidentali e quelli del resto del mondo, quelli istituzionali e quelli indipendenti. Poi scriviamo quello che emerge quando si mettono insieme le diverse prospettive: un quadro più completo, più onesto, più utile.</p>
       <p>Quando non sappiamo qualcosa, lo diciamo. Quando un'informazione è incerta, lo segnaliamo. Preferiamo ammettere la complessità piuttosto che fingere certezze che non abbiamo.</p>
     </div>
 
-    <div class="about-section">
-      <h2>Cosa copriamo</h2>
+    <div class="about-block">
+      <div class="about-block-label">Copertura</div>
+      <h2>Di cosa scriviamo</h2>
       <p>Il nostro focus principale è su <strong>Europa</strong> e <strong>Americhe</strong> — le due aree geopolitiche che influenzano più direttamente il mondo in cui viviamo. Ma non ci fermiamo alle grandi potenze: ci interessano i Balcani, l'America Latina, le elezioni nei paesi che sembrano lontani ma che non lo sono affatto.</p>
-      <p>Affianchiamo all'analisi geopolitica una sezione dedicata a <strong>Cultura e Sport</strong>, perché siamo convinti che anche lo sport rifletta equilibri di potere, che la cultura sia spesso il primo campo in cui si combattono le battaglie politiche, e che separare nettamente questi mondi significhi perdere una parte importante della storia.</p>
+      <p>Affianchiamo all'analisi geopolitica una sezione dedicata a <strong>Cultura e Sport</strong>, perché siamo convinti che anche lo sport rifletta equilibri di potere e che la cultura sia spesso il primo campo in cui si combattono le battaglie politiche.</p>
       <p>Pubblichiamo ogni giorno. Nessun paywall, nessun abbonamento, nessuna pubblicità. Solo contenuti liberi per chiunque voglia capire meglio il mondo.</p>
     </div>
 
-    <div class="about-section">
-      <h2>Contattaci</h2>
+    <div class="about-block">
+      <div class="about-block-label">Contatti</div>
+      <h2>Scrivici</h2>
       <p>Hai una segnalazione, una critica, un suggerimento o vuoi semplicemente dirci cosa ne pensi? Siamo qui.</p>
       <div class="about-contacts">
         <a class="contact-card" href="mailto:geoquotidiana@gmail.com">
           <div class="contact-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff6463" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff6463" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </div>
           <div>
-            <div class="contact-label">Email</div>
-            <div class="contact-value">geoquotidiana@gmail.com</div>
+            <div class="contact-info-label">Email</div>
+            <div class="contact-info-value">geoquotidiana@gmail.com</div>
           </div>
         </a>
         <a class="contact-card" href="https://instagram.com/geopolitica.quotidiana" target="_blank" rel="noopener noreferrer">
           <div class="contact-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff6463" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff6463" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           </div>
           <div>
-            <div class="contact-label">Instagram</div>
-            <div class="contact-value">@geopolitica.quotidiana</div>
+            <div class="contact-info-label">Instagram</div>
+            <div class="contact-info-value">@geopolitica.quotidiana</div>
           </div>
         </a>
       </div>
