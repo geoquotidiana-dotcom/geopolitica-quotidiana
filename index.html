@@ -520,6 +520,11 @@ function setCategory(cat, btn){
   activeCategory = cat;
   document.querySelectorAll('.nav-pill').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
+  document.getElementById('article-view').style.display = 'none';
+  document.getElementById('about-view').style.display = 'none';
+  document.getElementById('home-view').style.display = 'block';
+  window.scrollTo(0,0);
+  window.onscroll = scrollHandler;
   renderHome();
 }
 
