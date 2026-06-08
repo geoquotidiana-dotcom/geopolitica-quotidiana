@@ -59,12 +59,12 @@
     .nav-pill:hover{color:rgba(255,255,255,.7)}
     .nav-pill.active{color:var(--white);border-bottom-color:var(--coral)}
     .nav-pill.active.cat-europa{border-bottom-color:var(--blue);color:#8888ff}
-    .nav-pill.active.cat-americhe{border-bottom-color:var(--coral);color:#ff9494}.nav-pill.active.cat-sport{border-bottom-color:#00897b;color:#4db6ac}
+    .nav-pill.active.cat-americhe{border-bottom-color:var(--coral);color:#ff9494}.nav-pill.active.cat-medio-oriente{border-bottom-color:#c77a00;color:#e8a020}.nav-pill.active.cat-mondo{border-bottom-color:#5c35cc;color:#9d7fe8}
 
     /* CAT TAGS */
     .cat-tag{display:inline-flex;align-items:center;padding:4px 10px;border-radius:3px;font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;width:fit-content}
     .cat-tag.europa{background:var(--blue);color:#fff}
-    .cat-tag.americhe{background:var(--coral);color:#fff}.cat-tag.sport{background:#00897b;color:#fff}
+    .cat-tag.americhe{background:var(--coral);color:#fff}.cat-tag.medio-oriente{background:#c77a00;color:#fff}.cat-tag.mondo{background:#5c35cc;color:#fff}
 
     /* HERO */
     .hero{position:relative;height:520px;overflow:hidden;background:var(--black);cursor:pointer}
@@ -98,7 +98,7 @@
     .sec-meta{font-family:var(--mono);font-size:9px;color:rgba(255,255,255,.4)}
     .sec-img-fallback{position:absolute;inset:0}
     .sec-img-fallback.europa{background:linear-gradient(145deg,#06051a,#1d00ff)}
-    .sec-img-fallback.americhe{background:linear-gradient(145deg,#1a0606,#ff6463)}.sec-img-fallback.sport{background:linear-gradient(145deg,#001a18,#00897b)}
+    .sec-img-fallback.americhe{background:linear-gradient(145deg,#1a0606,#ff6463)}.sec-img-fallback.medio-oriente{background:linear-gradient(145deg,#1a0e00,#c77a00)}.sec-img-fallback.mondo{background:linear-gradient(145deg,#0d0a1a,#5c35cc)}
 
     /* SECTION DIVIDER */
     .section-divider{display:flex;align-items:center;gap:14px;padding:20px 32px 0}
@@ -145,7 +145,7 @@
     .art-meta-dot{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.15)}
     .art-bg-fallback{position:absolute;inset:0}
     .art-bg-fallback.europa{background:linear-gradient(145deg,#06051a,#1d00ff)}
-    .art-bg-fallback.americhe{background:linear-gradient(145deg,#1a0606,#ff6463)}.art-bg-fallback.sport{background:linear-gradient(145deg,#001a18,#00897b)}
+    .art-bg-fallback.americhe{background:linear-gradient(145deg,#1a0606,#ff6463)}.art-bg-fallback.medio-oriente{background:linear-gradient(145deg,#1a0e00,#c77a00)}.art-bg-fallback.mondo{background:linear-gradient(145deg,#0d0a1a,#5c35cc)}
     .art-body-wrap{max-width:700px;margin:0 auto;padding:44px 28px 88px}
     .art-body{font-size:16.5px;line-height:1.78;color:#333}
     .art-body p{margin-bottom:22px}
@@ -244,7 +244,8 @@
     <button class="nav-pill active" id="btn-all" onclick="setCategory('all',this)">Tutto</button>
     <button class="nav-pill cat-europa" id="btn-europa" onclick="setCategory('europa',this)">Europa</button>
     <button class="nav-pill cat-americhe" id="btn-americhe" onclick="setCategory('americhe',this)">Americhe</button>
-    <button class="nav-pill cat-sport" id="btn-sport" onclick="setCategory('sport',this)">Cultura & Sport</button>
+    <button class="nav-pill cat-medio-oriente" id="btn-medio-oriente" onclick="setCategory('medio-oriente',this)">Medio Oriente</button>
+    <button class="nav-pill cat-mondo" id="btn-mondo" onclick="setCategory('mondo',this)">Mondo</button>
     <button class="nav-pill" id="btn-about" onclick="goToAbout()">Chi siamo</button>
   </nav>
 </header>
@@ -492,14 +493,14 @@ let ARTICLES = [
 //  TICKER CONTENT
 // ═══════════════════════════════════════
 const TICKER_ITEMS = [
-  "Armenia vota oggi: elezioni decisive per il futuro geopolitico del Caucaso",
+  "Israele bombarda Teheran, Iran risponde: il cessate il fuoco traballa",
+  "Armenia: Pashinyan vince, Russia perde terreno nel Caucaso",
   "Pentagono taglia brigate in Europa: 5.000 soldati in meno dalla Germania",
-  "Venezuela in transizione: Trump applica la 'formula' dopo l'intervento di gennaio",
-  "Cuba torna al centro della strategia USA nell'emisfero",
-  "Vertice UE: approvato il pacchetto da 150 miliardi per la difesa comune",
-  "Balcani: Montenegro e Albania avanzano nei negoziati di adesione",
+  "Venezuela dopo l'intervento USA: Trump applica la 'formula' nel continente",
+  "Cuba torna al centro della strategia americana nell'emisfero",
+  "NATO ad Ankara il 7 luglio: 70 miliardi per l'Ucraina sul tavolo",
   "USA-Messico: tavolo di crisi su dazi e migrazione",
-  "Mercosur-UE: accordo commerciale verso la firma definitiva"
+  "Zverev vince Roland Garros, Cobolli si ferma in finale"
 ];
 
 // ═══════════════════════════════════════
@@ -510,7 +511,7 @@ let activeCategory = 'all';
 // ═══════════════════════════════════════
 //  HELPERS
 // ═══════════════════════════════════════
-function catLabel(cat){ return cat==='europa'?'🇪🇺 Europa':cat==='sport'?'🏅 Sport':'🌎 Americhe' }
+function catLabel(cat){ return cat==='europa'?'🇪🇺 Europa':cat==='americhe'?'🌎 Americhe':cat==='medio-oriente'?'🌍 Medio Oriente':'🌐 Mondo' }
 function catTag(cat){ return `<div class="cat-tag ${cat}">${catLabel(cat)}</div>` }
 
 // ═══════════════════════════════════════
